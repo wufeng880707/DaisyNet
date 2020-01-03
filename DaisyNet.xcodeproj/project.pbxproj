@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -122,10 +122,17 @@
 		73DD359823BF171800DC83C5 /* DaisyNet */ = {
 			isa = PBXGroup;
 			children = (
-				73DD35C923BF175300DC83C5 /* DaisyNet */,
 				73DD359923BF171800DC83C5 /* AppDelegate.swift */,
 				73DD359B23BF171800DC83C5 /* SceneDelegate.swift */,
 				73DD359D23BF171800DC83C5 /* ViewController.swift */,
+				73DD35CA23BF175300DC83C5 /* RequestManager.swift */,
+				73DD35CB23BF175300DC83C5 /* CacheManager.swift */,
+				73DD35CC23BF175300DC83C5 /* UploadManager.swift */,
+				73DD35CD23BF175300DC83C5 /* DaisyLog.swift */,
+				73DD35CE23BF175300DC83C5 /* DaisyValue.swift */,
+				73DD35CF23BF175300DC83C5 /* DaisyNet.swift */,
+				73DD35D023BF175300DC83C5 /* DownloadManager.swift */,
+				73DD35D123BF175300DC83C5 /* CacheKey.swift */,
 				73DD359F23BF171800DC83C5 /* Main.storyboard */,
 				73DD35A223BF172B00DC83C5 /* Assets.xcassets */,
 				73DD35A423BF172C00DC83C5 /* LaunchScreen.storyboard */,
@@ -152,21 +159,6 @@
 			path = DaisyNetUITests;
 			sourceTree = "<group>";
 		};
-		73DD35C923BF175300DC83C5 /* DaisyNet */ = {
-			isa = PBXGroup;
-			children = (
-				73DD35CA23BF175300DC83C5 /* RequestManager.swift */,
-				73DD35CB23BF175300DC83C5 /* CacheManager.swift */,
-				73DD35CC23BF175300DC83C5 /* UploadManager.swift */,
-				73DD35CD23BF175300DC83C5 /* DaisyLog.swift */,
-				73DD35CE23BF175300DC83C5 /* DaisyValue.swift */,
-				73DD35CF23BF175300DC83C5 /* DaisyNet.swift */,
-				73DD35D023BF175300DC83C5 /* DownloadManager.swift */,
-				73DD35D123BF175300DC83C5 /* CacheKey.swift */,
-			);
-			path = DaisyNet;
-			sourceTree = "<group>";
-		};
 		ABF4395281CE669D5FC1FF25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +173,6 @@
 				8321552A51C5CB88E5B7B3EF /* Pods-DaisyNet.debug.xcconfig */,
 				0EFBA79C66CAD5D1ACBB3A64 /* Pods-DaisyNet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
