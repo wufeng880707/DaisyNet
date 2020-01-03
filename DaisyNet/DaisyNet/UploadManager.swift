@@ -36,7 +36,7 @@ class UploadManager {
         return taskManager
     }
     
-    /// 暂停下载
+    /// 暂停上传 不需要知道结果
     func cancel(_ url: String, parameters: Parameters?, dynamicParams: Parameters? = nil) {
         let key = cacheKey(url, parameters, dynamicParams)
         let task = uploadTasks[key]
@@ -57,7 +57,7 @@ class UploadManager {
         }
     }
     
-    /// 删除单个下载
+    /// 删除单个下载回调结果
     func delete(_ url: String, parameters: Parameters? , dynamicParams: Parameters? = nil, completion: @escaping (Bool)->()) {
         let key = cacheKey(url, parameters, dynamicParams)
         if let task = uploadTasks[key] {
@@ -69,15 +69,7 @@ class UploadManager {
         }
     }
     
-    /// 下载状态
-    func uploadStatus(_ url: String, parameters: Parameters?, dynamicParams: Parameters? = nil) -> UploadStatus {
-        let key = cacheKey(url, parameters, dynamicParams)
-        let task = uploadTasks[key]
-        if downloadPercent(url, parameters: parameters) == 1 { return .complete }
-        return task?.uploadStatus ?? .suspend
-    }
-    
-    /// 下载进度
+    /// 上传进度
     @discardableResult
     func uploadProgress(_ url: String, parameters: Parameters?, dynamicParams: Parameters? = nil, progress: @escaping ((Double)->())) -> UploadTaskManager? {
         let key = cacheKey(url, parameters, dynamicParams)
@@ -95,7 +87,66 @@ class UploadManager {
             return nil
         }
     }
+    
+    func upload (
+            _ url: String,
+            parameters: Parameters? = nil,
+            images: [UIImage],
+            encoding: ParameterEncoding = URLEncoding.default,
+            headers: HTTPHeaders? = nil,
+            success: @escaping (_ response : Any?) -> (),
+            failture : @escaping (_ error : Error)->()
+            ) {
+
+        Alamofire.upload(multipartFormData: { multipartFormData in
+
+            if parameters != nil {
+                
+                 for (key, value) in parameters! {
+                                            
+                    let valueStr = "\(value)"
+                     //参数的上传
+                     multipartFormData.append((valueStr.data(using: String.Encoding.utf8)!), withName: key)
+                 }
+            }
+
+            for (index, value) in images.enumerated() {
+
+                let imageData = value.jpegData(compressionQuality: 1.0)
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyyMMddHHmmss"
+                let str = formatter.string(from: Date())
+                let fileName = str+"\(index)"+".jpg"
+
+                // 以文件流格式上传
+                // 批量上传与单张上传，后台语言为java或.net等
+                multipartFormData.append(imageData!, withName: "fileupload", fileName: fileName, mimeType: "image/jpeg")
+//                // 单张上传，后台语言为PHP
+//              multipartFormData.append(imageData!, withName: "fileupload", fileName: fileName, mimeType: "image/jpeg")
+//              // 批量上传，后台语言为PHP。 注意：此处服务器需要知道，前台传入的是一个图片数组
+//              multipartFormData.append(imageData!, withName: "fileupload[\(index)]", fileName: fileName, mimeType: "image/jpeg")
+            }
+        }, to: url, headers: headers, encodingCompletion: { (encodingResult) in
+            switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        print("response = \(response)")
+                        let result = response.result
+                        if result.isSuccess {
+                            success(response.value)
+                        }
+                    }
+                    // 获取上传进度
+                    upload.uploadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                        print("图片上传进度: \(progress.fractionCompleted)")
+                    }
+                case .failure(let encodingError):
+                    failture(encodingError)
+            }
+        })
+    }
 }
+
 
 // MARK: - 上传状态
 public enum UploadStatus {
@@ -115,7 +166,7 @@ public class UploadTaskManager {
     init() {
 
         NotificationCenter.default.addObserver(self, selector: #selector(uploadCancel), name: NSNotification.Name.init("DaisyUploadCancel"), object: nil)
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillResignActive, object: nil, queue: nil) { (_) in
+        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: nil) { (_) in
             self.uploadRequest?.cancel()
         }
     }
@@ -134,7 +185,7 @@ public class UploadTaskManager {
         ) -> UploadTaskManager?
     {
     
-        guard let imageData = UIImageJPEGRepresentation(image, 1.0) else {
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
             
             return nil
         }
@@ -175,66 +226,4 @@ public class UploadTaskManager {
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
         return SessionManager(configuration: configuration)
     }()
-    
-    
-    fileprivate func upload (
-            _ url: String,
-            parameters: Parameters? = nil,
-            images: [UIImage],
-            encoding: ParameterEncoding = URLEncoding.default,
-            headers: HTTPHeaders? = nil,
-            fileName: String?
-            ) -> UploadTaskManager
-        {
-
-            manager.upload(multipartFormData: { multipartFormData in
-
-                if parameters != nil {
-                    
-                     for (key, value) in parameters! {
-                                                
-                        let valueStr = "\(value)"
-                         //参数的上传
-                         multipartFormData.append((valueStr.data(using: String.Encoding.utf8)!), withName: key)
-                     }
-                }
-
-                for (index, value) in images.enumerated() {
-
-                    let imageData = UIImageJPEGRepresentation(value, 1.0)
-                    let formatter = DateFormatter()
-                    formatter.dateFormat = "yyyyMMddHHmmss"
-                    let str = formatter.string(from: Date())
-                    let fileName = str+"\(index)"+".jpg"
-
-                    // 以文件流格式上传
-                    // 批量上传与单张上传，后台语言为java或.net等
-                    multipartFormData.append(imageData!, withName: "fileupload", fileName: fileName, mimeType: "image/jpeg")
-    //                // 单张上传，后台语言为PHP
-    //                multipartFormData.append(imageData!, withName: "fileupload", fileName: fileName, mimeType: "image/jpeg")
-    //                // 批量上传，后台语言为PHP。 注意：此处服务器需要知道，前台传入的是一个图片数组
-    //                multipartFormData.append(imageData!, withName: "fileupload[\(index)]", fileName: fileName, mimeType: "image/jpeg")
-                }
-            }, to: url, headers: headers, encodingCompletion: { (encodingResult) in
-                
-                switch encodingResult {
-                    case .success(let upload, _, _):
-                        upload.responseJSON { response in
-                            print("response = \(response)")
-                            let result = response.result
-                            if result.isSuccess {
-//                                success(response.value)
-                            }
-                        }
-                        // 获取上传进度
-                        upload.uploadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-                            print("图片上传进度: \(progress.fractionCompleted)")
-                        }
-                    case .failure(let encodingError):
-//                        failture(encodingError)
-                }
-            })
-            uploadStatus = .uploading
-            return self
-        }
 }

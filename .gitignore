@@ -1,0 +1,7 @@
+DaisyNet.git.xcodeproj/xcuserdata/
+DaisyNet.git.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+DaisyNet.git.xcodeproj/project.xcworkspace/xcuserdata/
