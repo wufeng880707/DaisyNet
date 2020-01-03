@@ -23,6 +23,7 @@
 		73DD35D723BF175400DC83C5 /* DaisyNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35CF23BF175300DC83C5 /* DaisyNet.swift */; };
 		73DD35D823BF175400DC83C5 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35D023BF175300DC83C5 /* DownloadManager.swift */; };
 		73DD35D923BF175400DC83C5 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35D123BF175300DC83C5 /* CacheKey.swift */; };
+		EE969B789DBE85C3E47D65FB /* Pods_DaisyNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCDEF35EFBBE73EC00EE36F /* Pods_DaisyNet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EFBA79C66CAD5D1ACBB3A64 /* Pods-DaisyNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaisyNet.release.xcconfig"; path = "Target Support Files/Pods-DaisyNet/Pods-DaisyNet.release.xcconfig"; sourceTree = "<group>"; };
+		6DCDEF35EFBBE73EC00EE36F /* Pods_DaisyNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaisyNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DD359623BF171800DC83C5 /* DaisyNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaisyNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DD359923BF171800DC83C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73DD359B23BF171800DC83C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		73DD35CF23BF175300DC83C5 /* DaisyNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaisyNet.swift; sourceTree = "<group>"; };
 		73DD35D023BF175300DC83C5 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		73DD35D123BF175300DC83C5 /* CacheKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
+		8321552A51C5CB88E5B7B3EF /* Pods-DaisyNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaisyNet.debug.xcconfig"; path = "Target Support Files/Pods-DaisyNet/Pods-DaisyNet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE969B789DBE85C3E47D65FB /* Pods_DaisyNet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +104,8 @@
 				73DD35AF23BF172D00DC83C5 /* DaisyNetTests */,
 				73DD35BA23BF172D00DC83C5 /* DaisyNetUITests */,
 				73DD359723BF171800DC83C5 /* Products */,
+				B29D21A2BC3B66726681EE79 /* Pods */,
+				ABF4395281CE669D5FC1FF25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +167,24 @@
 			path = DaisyNet;
 			sourceTree = "<group>";
 		};
+		ABF4395281CE669D5FC1FF25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DCDEF35EFBBE73EC00EE36F /* Pods_DaisyNet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B29D21A2BC3B66726681EE79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8321552A51C5CB88E5B7B3EF /* Pods-DaisyNet.debug.xcconfig */,
+				0EFBA79C66CAD5D1ACBB3A64 /* Pods-DaisyNet.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73DD35C023BF172D00DC83C5 /* Build configuration list for PBXNativeTarget "DaisyNet" */;
 			buildPhases = (
+				9B8EF66C68BCA1BF9113D27F /* [CP] Check Pods Manifest.lock */,
 				73DD359223BF171800DC83C5 /* Sources */,
 				73DD359323BF171800DC83C5 /* Frameworks */,
 				73DD359423BF171800DC83C5 /* Resources */,
+				4DA51F2B8E3D9E1D20236BD8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +312,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DA51F2B8E3D9E1D20236BD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaisyNet/Pods-DaisyNet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaisyNet/Pods-DaisyNet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DaisyNet/Pods-DaisyNet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B8EF66C68BCA1BF9113D27F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaisyNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73DD359223BF171800DC83C5 /* Sources */ = {
@@ -472,6 +541,7 @@
 		};
 		73DD35C123BF172D00DC83C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8321552A51C5CB88E5B7B3EF /* Pods-DaisyNet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +559,7 @@
 		};
 		73DD35C223BF172D00DC83C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFBA79C66CAD5D1ACBB3A64 /* Pods-DaisyNet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
