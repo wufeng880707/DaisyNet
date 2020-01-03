@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73DD359A23BF171800DC83C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD359923BF171800DC83C5 /* AppDelegate.swift */; };
+		73DD359C23BF171800DC83C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD359B23BF171800DC83C5 /* SceneDelegate.swift */; };
+		73DD359E23BF171800DC83C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD359D23BF171800DC83C5 /* ViewController.swift */; };
+		73DD35A123BF171800DC83C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DD359F23BF171800DC83C5 /* Main.storyboard */; };
+		73DD35A323BF172B00DC83C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73DD35A223BF172B00DC83C5 /* Assets.xcassets */; };
+		73DD35A623BF172C00DC83C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DD35A423BF172C00DC83C5 /* LaunchScreen.storyboard */; };
+		73DD35B123BF172D00DC83C5 /* DaisyNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35B023BF172D00DC83C5 /* DaisyNetTests.swift */; };
+		73DD35BC23BF172D00DC83C5 /* DaisyNetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35BB23BF172D00DC83C5 /* DaisyNetUITests.swift */; };
+		73DD35D223BF175400DC83C5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35CA23BF175300DC83C5 /* RequestManager.swift */; };
+		73DD35D323BF175400DC83C5 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35CB23BF175300DC83C5 /* CacheManager.swift */; };
+		73DD35D423BF175400DC83C5 /* UploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35CC23BF175300DC83C5 /* UploadManager.swift */; };
+		73DD35D523BF175400DC83C5 /* DaisyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35CD23BF175300DC83C5 /* DaisyLog.swift */; };
+		73DD35D623BF175400DC83C5 /* DaisyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35CE23BF175300DC83C5 /* DaisyValue.swift */; };
+		73DD35D723BF175400DC83C5 /* DaisyNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35CF23BF175300DC83C5 /* DaisyNet.swift */; };
+		73DD35D823BF175400DC83C5 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35D023BF175300DC83C5 /* DownloadManager.swift */; };
+		73DD35D923BF175400DC83C5 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD35D123BF175300DC83C5 /* CacheKey.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73DD35AD23BF172D00DC83C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73DD358E23BF171800DC83C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73DD359523BF171800DC83C5;
+			remoteInfo = DaisyNet;
+		};
+		73DD35B823BF172D00DC83C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73DD358E23BF171800DC83C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73DD359523BF171800DC83C5;
+			remoteInfo = DaisyNet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		73DD359623BF171800DC83C5 /* DaisyNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaisyNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DD359923BF171800DC83C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73DD359B23BF171800DC83C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		73DD359D23BF171800DC83C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73DD35A023BF171800DC83C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73DD35A223BF172B00DC83C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73DD35A523BF172C00DC83C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		73DD35A723BF172C00DC83C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73DD35AC23BF172D00DC83C5 /* DaisyNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaisyNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DD35B023BF172D00DC83C5 /* DaisyNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyNetTests.swift; sourceTree = "<group>"; };
+		73DD35B223BF172D00DC83C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73DD35B723BF172D00DC83C5 /* DaisyNetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaisyNetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DD35BB23BF172D00DC83C5 /* DaisyNetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyNetUITests.swift; sourceTree = "<group>"; };
+		73DD35BD23BF172D00DC83C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73DD35CA23BF175300DC83C5 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		73DD35CB23BF175300DC83C5 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		73DD35CC23BF175300DC83C5 /* UploadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadManager.swift; sourceTree = "<group>"; };
+		73DD35CD23BF175300DC83C5 /* DaisyLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaisyLog.swift; sourceTree = "<group>"; };
+		73DD35CE23BF175300DC83C5 /* DaisyValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaisyValue.swift; sourceTree = "<group>"; };
+		73DD35CF23BF175300DC83C5 /* DaisyNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaisyNet.swift; sourceTree = "<group>"; };
+		73DD35D023BF175300DC83C5 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		73DD35D123BF175300DC83C5 /* CacheKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73DD359323BF171800DC83C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DD35A923BF172D00DC83C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DD35B423BF172D00DC83C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73DD358D23BF171800DC83C5 = {
+			isa = PBXGroup;
+			children = (
+				73DD359823BF171800DC83C5 /* DaisyNet */,
+				73DD35AF23BF172D00DC83C5 /* DaisyNetTests */,
+				73DD35BA23BF172D00DC83C5 /* DaisyNetUITests */,
+				73DD359723BF171800DC83C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73DD359723BF171800DC83C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73DD359623BF171800DC83C5 /* DaisyNet.app */,
+				73DD35AC23BF172D00DC83C5 /* DaisyNetTests.xctest */,
+				73DD35B723BF172D00DC83C5 /* DaisyNetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73DD359823BF171800DC83C5 /* DaisyNet */ = {
+			isa = PBXGroup;
+			children = (
+				73DD35C923BF175300DC83C5 /* DaisyNet */,
+				73DD359923BF171800DC83C5 /* AppDelegate.swift */,
+				73DD359B23BF171800DC83C5 /* SceneDelegate.swift */,
+				73DD359D23BF171800DC83C5 /* ViewController.swift */,
+				73DD359F23BF171800DC83C5 /* Main.storyboard */,
+				73DD35A223BF172B00DC83C5 /* Assets.xcassets */,
+				73DD35A423BF172C00DC83C5 /* LaunchScreen.storyboard */,
+				73DD35A723BF172C00DC83C5 /* Info.plist */,
+			);
+			path = DaisyNet;
+			sourceTree = "<group>";
+		};
+		73DD35AF23BF172D00DC83C5 /* DaisyNetTests */ = {
+			isa = PBXGroup;
+			children = (
+				73DD35B023BF172D00DC83C5 /* DaisyNetTests.swift */,
+				73DD35B223BF172D00DC83C5 /* Info.plist */,
+			);
+			path = DaisyNetTests;
+			sourceTree = "<group>";
+		};
+		73DD35BA23BF172D00DC83C5 /* DaisyNetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				73DD35BB23BF172D00DC83C5 /* DaisyNetUITests.swift */,
+				73DD35BD23BF172D00DC83C5 /* Info.plist */,
+			);
+			path = DaisyNetUITests;
+			sourceTree = "<group>";
+		};
+		73DD35C923BF175300DC83C5 /* DaisyNet */ = {
+			isa = PBXGroup;
+			children = (
+				73DD35CA23BF175300DC83C5 /* RequestManager.swift */,
+				73DD35CB23BF175300DC83C5 /* CacheManager.swift */,
+				73DD35CC23BF175300DC83C5 /* UploadManager.swift */,
+				73DD35CD23BF175300DC83C5 /* DaisyLog.swift */,
+				73DD35CE23BF175300DC83C5 /* DaisyValue.swift */,
+				73DD35CF23BF175300DC83C5 /* DaisyNet.swift */,
+				73DD35D023BF175300DC83C5 /* DownloadManager.swift */,
+				73DD35D123BF175300DC83C5 /* CacheKey.swift */,
+			);
+			path = DaisyNet;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73DD359523BF171800DC83C5 /* DaisyNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73DD35C023BF172D00DC83C5 /* Build configuration list for PBXNativeTarget "DaisyNet" */;
+			buildPhases = (
+				73DD359223BF171800DC83C5 /* Sources */,
+				73DD359323BF171800DC83C5 /* Frameworks */,
+				73DD359423BF171800DC83C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DaisyNet;
+			productName = DaisyNet;
+			productReference = 73DD359623BF171800DC83C5 /* DaisyNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		73DD35AB23BF172D00DC83C5 /* DaisyNetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73DD35C323BF172D00DC83C5 /* Build configuration list for PBXNativeTarget "DaisyNetTests" */;
+			buildPhases = (
+				73DD35A823BF172D00DC83C5 /* Sources */,
+				73DD35A923BF172D00DC83C5 /* Frameworks */,
+				73DD35AA23BF172D00DC83C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73DD35AE23BF172D00DC83C5 /* PBXTargetDependency */,
+			);
+			name = DaisyNetTests;
+			productName = DaisyNetTests;
+			productReference = 73DD35AC23BF172D00DC83C5 /* DaisyNetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		73DD35B623BF172D00DC83C5 /* DaisyNetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73DD35C623BF172D00DC83C5 /* Build configuration list for PBXNativeTarget "DaisyNetUITests" */;
+			buildPhases = (
+				73DD35B323BF172D00DC83C5 /* Sources */,
+				73DD35B423BF172D00DC83C5 /* Frameworks */,
+				73DD35B523BF172D00DC83C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73DD35B923BF172D00DC83C5 /* PBXTargetDependency */,
+			);
+			name = DaisyNetUITests;
+			productName = DaisyNetUITests;
+			productReference = 73DD35B723BF172D00DC83C5 /* DaisyNetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73DD358E23BF171800DC83C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = tomodel;
+				TargetAttributes = {
+					73DD359523BF171800DC83C5 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					73DD35AB23BF172D00DC83C5 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 73DD359523BF171800DC83C5;
+					};
+					73DD35B623BF172D00DC83C5 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 73DD359523BF171800DC83C5;
+					};
+				};
+			};
+			buildConfigurationList = 73DD359123BF171800DC83C5 /* Build configuration list for PBXProject "DaisyNet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73DD358D23BF171800DC83C5;
+			productRefGroup = 73DD359723BF171800DC83C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73DD359523BF171800DC83C5 /* DaisyNet */,
+				73DD35AB23BF172D00DC83C5 /* DaisyNetTests */,
+				73DD35B623BF172D00DC83C5 /* DaisyNetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73DD359423BF171800DC83C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73DD35A623BF172C00DC83C5 /* LaunchScreen.storyboard in Resources */,
+				73DD35A323BF172B00DC83C5 /* Assets.xcassets in Resources */,
+				73DD35A123BF171800DC83C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DD35AA23BF172D00DC83C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DD35B523BF172D00DC83C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73DD359223BF171800DC83C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73DD359E23BF171800DC83C5 /* ViewController.swift in Sources */,
+				73DD35D823BF175400DC83C5 /* DownloadManager.swift in Sources */,
+				73DD35D523BF175400DC83C5 /* DaisyLog.swift in Sources */,
+				73DD35D623BF175400DC83C5 /* DaisyValue.swift in Sources */,
+				73DD35D323BF175400DC83C5 /* CacheManager.swift in Sources */,
+				73DD35D423BF175400DC83C5 /* UploadManager.swift in Sources */,
+				73DD35D923BF175400DC83C5 /* CacheKey.swift in Sources */,
+				73DD359A23BF171800DC83C5 /* AppDelegate.swift in Sources */,
+				73DD359C23BF171800DC83C5 /* SceneDelegate.swift in Sources */,
+				73DD35D223BF175400DC83C5 /* RequestManager.swift in Sources */,
+				73DD35D723BF175400DC83C5 /* DaisyNet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DD35A823BF172D00DC83C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73DD35B123BF172D00DC83C5 /* DaisyNetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DD35B323BF172D00DC83C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73DD35BC23BF172D00DC83C5 /* DaisyNetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73DD35AE23BF172D00DC83C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73DD359523BF171800DC83C5 /* DaisyNet */;
+			targetProxy = 73DD35AD23BF172D00DC83C5 /* PBXContainerItemProxy */;
+		};
+		73DD35B923BF172D00DC83C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73DD359523BF171800DC83C5 /* DaisyNet */;
+			targetProxy = 73DD35B823BF172D00DC83C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		73DD359F23BF171800DC83C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73DD35A023BF171800DC83C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		73DD35A423BF172C00DC83C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73DD35A523BF172C00DC83C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73DD35BE23BF172D00DC83C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73DD35BF23BF172D00DC83C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73DD35C123BF172D00DC83C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DaisyNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wf.DaisyNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73DD35C223BF172D00DC83C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DaisyNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wf.DaisyNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		73DD35C423BF172D00DC83C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DaisyNetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wf.DaisyNetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DaisyNet.app/DaisyNet";
+			};
+			name = Debug;
+		};
+		73DD35C523BF172D00DC83C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DaisyNetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wf.DaisyNetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DaisyNet.app/DaisyNet";
+			};
+			name = Release;
+		};
+		73DD35C723BF172D00DC83C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DaisyNetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wf.DaisyNetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DaisyNet;
+			};
+			name = Debug;
+		};
+		73DD35C823BF172D00DC83C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DaisyNetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wf.DaisyNetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DaisyNet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73DD359123BF171800DC83C5 /* Build configuration list for PBXProject "DaisyNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73DD35BE23BF172D00DC83C5 /* Debug */,
+				73DD35BF23BF172D00DC83C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73DD35C023BF172D00DC83C5 /* Build configuration list for PBXNativeTarget "DaisyNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73DD35C123BF172D00DC83C5 /* Debug */,
+				73DD35C223BF172D00DC83C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73DD35C323BF172D00DC83C5 /* Build configuration list for PBXNativeTarget "DaisyNetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73DD35C423BF172D00DC83C5 /* Debug */,
+				73DD35C523BF172D00DC83C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73DD35C623BF172D00DC83C5 /* Build configuration list for PBXNativeTarget "DaisyNetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73DD35C723BF172D00DC83C5 /* Debug */,
+				73DD35C823BF172D00DC83C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73DD358E23BF171800DC83C5 /* Project object */;
+}
