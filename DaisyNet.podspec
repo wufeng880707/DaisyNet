@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "DaisyNet"
   s.version      = "1"
-  s.summary      = "DaisyNet."
+  s.summary      = "DaisyNet添加图片上传"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DaisyNet/DaisyNet/*.{h,m,swift}"
+  s.source_files  = "DaisyNet/DaisyNet/*.swift"   #OC可以使用类似这样"Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
