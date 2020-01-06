@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DaisyNet"
-  s.version      = "1"
+  s.version      = "6"
   s.summary      = "DaisyNet添加图片上传"
   s.swift_version = '5.0'
   
