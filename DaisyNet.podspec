@@ -18,6 +18,8 @@ Pod::Spec.new do |s|
   s.name         = "DaisyNet"
   s.version      = "4"
   s.summary      = "DaisyNet添加图片上传"
+  s.swift_version = '5.0'
+  
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -65,7 +67,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "10.0"
+  s.platform     = :ios, "13.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -134,7 +136,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "BLNetworking"
-  s.dependency "Alamofire'"
+  s.dependency "Alamofire"
   s.dependency "Cache"
 
 end
