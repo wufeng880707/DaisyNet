@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73A5CF4323C30A7A0085EC64 /* DaisyNet.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 73A5CF4223C30A7A0085EC64 /* DaisyNet.podspec */; };
 		73DD359A23BF171800DC83C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD359923BF171800DC83C5 /* AppDelegate.swift */; };
 		73DD359C23BF171800DC83C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD359B23BF171800DC83C5 /* SceneDelegate.swift */; };
 		73DD359E23BF171800DC83C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD359D23BF171800DC83C5 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		0EFBA79C66CAD5D1ACBB3A64 /* Pods-DaisyNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaisyNet.release.xcconfig"; path = "Target Support Files/Pods-DaisyNet/Pods-DaisyNet.release.xcconfig"; sourceTree = "<group>"; };
 		6DCDEF35EFBBE73EC00EE36F /* Pods_DaisyNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaisyNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73A5CF4223C30A7A0085EC64 /* DaisyNet.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = DaisyNet.podspec; sourceTree = SOURCE_ROOT; };
 		73DD359623BF171800DC83C5 /* DaisyNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaisyNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DD359923BF171800DC83C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73DD359B23BF171800DC83C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		73DD359823BF171800DC83C5 /* DaisyNet */ = {
 			isa = PBXGroup;
 			children = (
+				73A5CF4223C30A7A0085EC64 /* DaisyNet.podspec */,
 				73DD35DA23BF285F00DC83C5 /* DaisyNet */,
 				73DD359923BF171800DC83C5 /* AppDelegate.swift */,
 				73DD359B23BF171800DC83C5 /* SceneDelegate.swift */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73DD35A623BF172C00DC83C5 /* LaunchScreen.storyboard in Resources */,
+				73A5CF4323C30A7A0085EC64 /* DaisyNet.podspec in Resources */,
 				73DD35A323BF172B00DC83C5 /* Assets.xcassets in Resources */,
 				73DD35A123BF171800DC83C5 /* Main.storyboard in Resources */,
 			);
